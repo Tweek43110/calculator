@@ -1,0 +1,56 @@
+#container {
+    max-width: 300px;
+    margin: auto;
+    padding:15px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: #BB5252;
+}
+
+#output {
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    width: auto;
+    height: 1em;
+    font-size: 2em;
+    background-color: #D5D5D5;
+}
+
+#output p {
+    text-align: end;
+    margin: auto;
+    font-family: 'Coiny', cursive;
+
+}
+
+table {
+    margin: auto;
+    padding: 15px;
+}
+
+ 
+button {
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 60px;
+    padding: 15px;
+    font-family: 'Coiny', cursive;
+    font-size: 2em;
+    background-color: #748F94;
+}
+button:hover {
+    background-color: #AEC9CE;
+}
+
+#info{
+    margin: auto;
+    padding: 10px;
+}
+h1, h2 {
+    display: inline;
+    padding: 10px;
+    font-size: 1em; 
+    font-family: 'Questrial', sans-serif;
+}

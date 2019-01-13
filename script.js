@@ -1,6 +1,8 @@
 
+
+//To call, operator must be string or else there is an error
 function operate(operator, num1, num2){
-    if (operator === '+') {
+    if (operator === "+") {
         return math.add(num1, num2);
     } else if (operator === '-') {
         return math.subtract(num1, num2);
