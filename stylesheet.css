@@ -30,6 +30,9 @@ table {
     padding: 15px;
 }
 
+#grid {
+    display: 
+}
  
 button {
     border: 1px solid black;
@@ -42,6 +45,10 @@ button {
 }
 button:hover {
     background-color: #AEC9CE;
+}
+
+#equals, #clear{
+    width: 124px;
 }
 
 #info{
