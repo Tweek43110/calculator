@@ -1,5 +1,5 @@
 let output = document.getElementById('output');
-let globalAnswer = 0;  //To be changed once the rest is sorted out
+let storedValues = [];
 
 let btn = document.getElementsByClassName('btn');
 //Classes throw an HTML collection so event listener must be added via indexer
@@ -7,14 +7,13 @@ for (i=0; i < btn.length; i++){
     btn[i].addEventListener('click', buttonClick);
 }
 
-function storeAnswer(value) {
-    let value = value;
-    globalAnswer = value;
-    return value;
-}
 
 function currentValue() {
     let currentValue = document.getElementById('output').innerHTML;
+     if (currentValue === "+" || currentValue === "-" ||
+    currentValue === "*" || currentValue === "/") {
+        return currentValue;
+    }
     //Producing string elements on click, convert to number
     currentValue = parseInt(currentValue);
     return currentValue;
@@ -24,13 +23,23 @@ function currentValue() {
 function buttonClick() {
     let btnClicked = this.innerHTML;
     output.textContent = btnClicked;
+    addClick();
+}
+
+function addClick() {
+    let toAdd = currentValue();
+    storedValues.push(toAdd);
+
 }
 
 //Produces answer when equals button clicked
 function equals(event) {
     let equals = document.getElementById('equals');
     equals.addEventListener('click', function(event) {
-        let answer = globalAnswer;
+        let val1 = storedValues[0];
+        let val2 = storedValues[2];
+        let op = storedValues[1];
+        let answer = operate(op, val1, val2);
         output.textContent = answer;
     })
 }
