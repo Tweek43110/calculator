@@ -1,22 +1,35 @@
 let output = document.getElementById('output');
-let btn = document.getElementsByClassName('btn');
 let globalAnswer = 0;  //To be changed once the rest is sorted out
 
+let btn = document.getElementsByClassName('btn');
 //Classes throw an HTML collection so event listener must be added via indexer
 for (i=0; i < btn.length; i++){
     btn[i].addEventListener('click', buttonClick);
 }
 
+function storeAnswer(value) {
+    let value = value;
+    globalAnswer = value;
+    return value;
+}
+
+function currentValue() {
+    let currentValue = document.getElementById('output').innerHTML;
+    //Producing string elements on click, convert to number
+    currentValue = parseInt(currentValue);
+    return currentValue;
+}
+
+//Displays button clicked in DOM
 function buttonClick() {
     let btnClicked = this.innerHTML;
-    console.log('You clicked ' + btnClicked);
     output.textContent = btnClicked;
 }
 
+//Produces answer when equals button clicked
 function equals(event) {
     let equals = document.getElementById('equals');
     equals.addEventListener('click', function(event) {
-        console.log('Equals button pressed!');
         let answer = globalAnswer;
         output.textContent = answer;
     })
