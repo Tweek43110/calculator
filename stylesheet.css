@@ -1,4 +1,4 @@
-#container {
+#calc{
     max-width: 300px;
     margin: auto;
     padding:15px;
@@ -34,7 +34,7 @@ table {
     display: 
 }
  
-.btn {
+.digit, .operator, #equals, .clear, .btn {
     border: 1px solid black;
     border-radius: 7px;
     width: 60px;
@@ -43,11 +43,11 @@ table {
     font-size: 2em;
     background-color: #748F94;
 }
-.btn:hover {
+.digit:hover, .operator:hover, #equals:hover, .clear:hover, .btn:hover {
     background-color: #AEC9CE;
 }
 
-#equals, #clear{
+#equals, #clearAll{
     width: 124px;
 }
 
