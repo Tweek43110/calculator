@@ -34,7 +34,7 @@ table {
     display: 
 }
  
-button {
+.btn {
     border: 1px solid black;
     border-radius: 7px;
     width: 60px;
@@ -43,7 +43,7 @@ button {
     font-size: 2em;
     background-color: #748F94;
 }
-button:hover {
+.btn:hover {
     background-color: #AEC9CE;
 }
 

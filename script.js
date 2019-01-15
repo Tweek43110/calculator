@@ -1,3 +1,13 @@
+let btn = document.getElementsByClassName('btn');
+//Classes throw an HTML collection so event listener must be added via indexer
+for (i=0; i < btn.length; i++){
+    btn[i].addEventListener('click', buttonClick);
+}
+
+function buttonClick() {
+    console.log("You clicked " + this.innerHTML);
+}
+
 
 
 //To call, operator must be string or else there is an error
