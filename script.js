@@ -30,8 +30,7 @@ function buttonClick() {
 //Pushes clicked buttons to the array
 function addClick() {
     let toAdd = currentValue();
-    storedValues.push(toAdd);
-
+    storedValues.push(toAdd)
 }
 
 //Produces answer when equals button clicked
@@ -48,6 +47,14 @@ function equals(event) {
 }
 equals(event)
 
+function clearValues(cleared) {
+    let clear = document.getElementById('clear');
+    clear.addEventListener('click', function(cleared) {
+        output.textContent = "Cleared";
+        return storedValues = [];
+    })
+}
+clearValues()
 
 
 //To call, operator must be string or else there is an error
