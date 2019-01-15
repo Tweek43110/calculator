@@ -10,6 +10,7 @@ for (i=0; i < btn.length; i++){
 
 function currentValue() {
     let currentValue = document.getElementById('output').innerHTML;
+    //exceptions to be left as strings
      if (currentValue === "+" || currentValue === "-" ||
     currentValue === "*" || currentValue === "/") {
         return currentValue;
@@ -26,6 +27,7 @@ function buttonClick() {
     addClick();
 }
 
+//Pushes clicked buttons to the array
 function addClick() {
     let toAdd = currentValue();
     storedValues.push(toAdd);
@@ -41,6 +43,7 @@ function equals(event) {
         let op = storedValues[1];
         let answer = operate(op, val1, val2);
         output.textContent = answer;
+        return storedValues = [];
     })
 }
 equals(event)
